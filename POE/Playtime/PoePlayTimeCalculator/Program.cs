@@ -4,30 +4,14 @@ using System.Text.Json;
 
 public class CharacterData
 {
-    public CharacterData()
-    {
-        name = "";
-        league = "";
-        @class = "";
-        classId ="";
-        ascendancyClass="";
-        level="";
-        experience="";
-        pinnable="";
-
-
-
-        // Initialize other properties as needed.
-    }
-
     public string name { get; set; }
     public string league { get; set; }
-    public int classId { get; set; }
-    public int ascendancyClass { get; set; }
+    public int? classId { get; set; }
+    public int? ascendancyClass { get; set; }
     public string @class { get; set; }
-    public int level { get; set; }
-    public long experience { get; set; }
-    public bool pinnable { get; set; }
+    public int? level { get; set; }
+    public long? experience { get; set; }
+    public bool? pinnable { get; set; }
 }
 
 public class Program
@@ -42,9 +26,6 @@ public class Program
 
             // Now you can work with the 'data' object that holds the parsed JSON data.
             Console.WriteLine($"Name: {data.name}");
-            Console.WriteLine($"League: {data.league}");
-            Console.WriteLine($"Class: {data.@class}");
-            Console.WriteLine($"Level: {data.level}");
             // ... and so on.
         }
         catch (Exception ex)
