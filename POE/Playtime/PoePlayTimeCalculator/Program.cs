@@ -4,6 +4,22 @@ using System.Text.Json;
 
 public class CharacterData
 {
+    public CharacterData()
+    {
+        name = "";
+        league = "";
+        @class = "";
+        classId ="";
+        ascendancyClass="";
+        level="";
+        experience="";
+        pinnable="";
+
+
+
+        // Initialize other properties as needed.
+    }
+
     public string name { get; set; }
     public string league { get; set; }
     public int classId { get; set; }
@@ -18,7 +34,7 @@ public class Program
 {
     static void Main()
     {
-        string jsonFilePath = "data.json";
+        string jsonFilePath = "JSON\\AllChars.json";
 
         try
         {
